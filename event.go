@@ -88,6 +88,11 @@ func (e *Event) Msg(msg string) {
 	}
 }
 
+// Print is an alias for Msg.
+func (e *Event) Print(msg string) {
+	e.Msg(msg)
+}
+
 // Msgf sends the event with formated msg added as the message field if not empty.
 //
 // NOTICE: once this methid is called, the *Event should be disposed.
@@ -106,6 +111,11 @@ func (e *Event) Msgf(format string, v ...interface{}) {
 	if err := e.write(); err != nil {
 		fmt.Fprintf(os.Stderr, "zerolog: could not write event: %v", err)
 	}
+}
+
+// Printf is an alias for Msgf.
+func (e *Event) Printf(format string, v ...interface{}) {
+	e.Msgf(format, v...)
 }
 
 // Fields is a helper function to use a map to set fields using type assertion.
