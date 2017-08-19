@@ -6,8 +6,9 @@ import (
 )
 
 func AppendTime(dst []byte, t time.Time, format string) []byte {
-	if format == "" {
-		return AppendInt64(dst, t.UnixNano())
+	if len(format) == 0 {
+		// defaults to microseconds-since-epoch, integer
+		return AppendInt64(dst, t.UnixNano() / 1000)
 	}
 	return append(t.AppendFormat(append(dst, '"'), format), '"')
 }
