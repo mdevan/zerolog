@@ -13,7 +13,7 @@ import (
 
 	"net/http/httptest"
 
-	"github.com/rs/zerolog"
+	"github.com/mdevan/zerolog"
 )
 
 func TestNewHandler(t *testing.T) {

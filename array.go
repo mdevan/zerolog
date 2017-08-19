@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rs/zerolog/internal/json"
+	"github.com/mdevan/zerolog/internal/json"
 )
 
 var arrayPool = &sync.Pool{
