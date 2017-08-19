@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/mdevan/zerolog/internal/json"
+	"github.com/mdevan/zerolog/json"
 )
 
 // Context configures a new sub-logger with contextual fields.

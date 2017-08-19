@@ -4,7 +4,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/mdevan/zerolog/internal/json"
+	"github.com/mdevan/zerolog/json"
 )
 
 func appendFields(dst []byte, fields map[string]interface{}) []byte {

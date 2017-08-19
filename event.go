@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mdevan/zerolog/internal/json"
+	"github.com/mdevan/zerolog/json"
 )
 
 var eventPool = &sync.Pool{

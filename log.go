@@ -74,7 +74,7 @@ import (
 	"strconv"
 	"sync/atomic"
 
-	"github.com/mdevan/zerolog/internal/json"
+	"github.com/mdevan/zerolog/json"
 )
 
 // Level defines log levels.
