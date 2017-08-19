@@ -54,7 +54,7 @@ func (w ConsoleWriter) Write(p []byte) (n int, err error) {
 		level = strings.ToUpper(l)[0:4]
 	}
 	fmt.Fprintf(buf, "%s |%s| %s",
-		colorize(event[TimestampFieldName], cDarkGray, !w.NoColor),
+		colorize(event[TimestampFieldName], cGray, !w.NoColor),
 		colorize(level, lvlColor, !w.NoColor),
 		colorize(event[MessageFieldName], cReset, !w.NoColor))
 	fields := make([]string, 0, len(event))
