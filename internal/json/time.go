@@ -7,7 +7,7 @@ import (
 
 func AppendTime(dst []byte, t time.Time, format string) []byte {
 	if format == "" {
-		return AppendInt64(dst, t.Unix())
+		return AppendInt64(dst, t.UnixNano())
 	}
 	return append(t.AppendFormat(append(dst, '"'), format), '"')
 }
